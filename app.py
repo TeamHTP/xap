@@ -17,7 +17,6 @@ def get_XPR_to_USD():
     return exchange_data['rates']['XRP']
 
 
-
 @app.route('/')
 def hello_world():
     return 'Hello, World!'
