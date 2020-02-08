@@ -29,6 +29,13 @@ def authorize():
 #     wallet = xpring.Wallet.from_seed(wallet_seed)
 #     url = 'grpc.xpring.tech:80'
 #     client = xpring.Client.from_url(url)
+#     client.send(amount, host_seed, wallet_seed)
+#     convert(client, host_seed)
+
+
+# def convert(client, host_seed):
+#     amount = client.get_balance(host_seed)
+#     pass
 
     
 
