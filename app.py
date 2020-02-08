@@ -31,6 +31,7 @@ def authorize():
     auth_id = content['data']['object']['id']
     command = f'curl https://api.stripe.com/v1/issuing/authorizations/{auth_id}/{response} -u {user} -X POST'
     os.system(command)
+    return f'{response}'
 
 
 # @app.route('/transfer', methods=['POST'])
