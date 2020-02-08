@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+import os
 app = Flask(__name__)
 
 
@@ -18,5 +19,5 @@ def authorize():
 
 if __name__ == '__main__':
     app.config['TEMPLATES_AUTO_RELOAD'] = True
-    app.run()
+    app.run(port=os.environ['PORT'])
  
