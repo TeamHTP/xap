@@ -1,7 +1,4 @@
 Flask==1.1.1
 gunicorn==20.0.4
-<<<<<<< HEAD
 requests==2.18.4
-=======
 xpring==0.1.0
->>>>>>> 65445d51af99a595926835469209dfee073e47ac
