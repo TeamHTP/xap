@@ -29,7 +29,7 @@ def authorize():
     response = 'decline'
     user = f'{os.environ["SK_KEY"]}:'
     auth_id = content['data']['object']['id']
-    command = f'curl https://api.stripe.com/v1/issuing/authorizations/{auth_id}/{response} -u {user}'
+    command = f'curl https://api.stripe.com/v1/issuing/authorizations/{auth_id}/{response} -u {user} -X POST'
     os.system(command)
 
 
