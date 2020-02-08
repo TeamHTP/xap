@@ -10,11 +10,10 @@ def hello_world():
 
 @app.route('/authorize', methods= ['GET','POST'])
 def authorize():
-    # content = request.json
-    return 'Hey'
+    content = request.json
    
-    # print(content)
-    # return False
+    print(content)
+    return False
     
 
 if __name__ == '__main__':
