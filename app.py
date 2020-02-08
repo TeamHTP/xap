@@ -27,7 +27,7 @@ def authorize():
     content = request.json
     response = 'decline'
     user = f'{os.environ["SK_KEY"]}:'
-    auth_id = content['id']
+    auth_id = content['data']['object']['id']
     command = f'curl https://api.stripe.com/v1/issuing/authorizations/{auth_id}/{response} -u {user}'
     os.system(command)
 
