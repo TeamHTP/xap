@@ -1,8 +1,21 @@
 from flask import Flask, request, jsonify
 import os
 import xpring
+import requests
 
 app = Flask(__name__)
+
+
+
+def get_XPR_to_USD():
+    COINLAYER_URL = "http://api.coinlayer.com/api/live"
+    COINLAYER_PARAMS = {'access_key': os.environ["COINLAYER_KEY"]}
+
+    r = requests.get(url = COINLAYER_URL, params = COINLAYER_PARAMS)
+    exchange_data = r.json()
+
+    return exchange_data['rates']['XRP']
+
 
 
 @app.route('/')
