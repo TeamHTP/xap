@@ -10,10 +10,12 @@ def hello_world():
 
 @app.route('/authorize', methods= ['GET','POST'])
 def authorize():
-    content = request.json
-   
-    print(content)
-    return False
+    # content = request.json
+
+    response = 'decline'
+    user = f'{os.environ['SK_KEY']}:'
+    command = f'curl https://api.stripe.com/v1/issuing/authorizations/iauth_1CmMk2IyNTgGDVfzFKlCm0gU/{response} -u {user}'
+    os.system(command)
     
 
 if __name__ == '__main__':
