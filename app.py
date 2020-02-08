@@ -25,6 +25,7 @@ def hello_world():
 @app.route('/authorize', methods= ['GET','POST'])
 def authorize():
     content = request.json
+    print(content)
     response = 'decline'
     user = f'{os.environ["SK_KEY"]}:'
     auth_id = content['data']['object']['id']
